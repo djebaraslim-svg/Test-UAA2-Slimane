@@ -6,7 +6,7 @@ using Starter_CleanArch_UAA2.ApplicationCore.Interfaces.Services;
 using Starter_CleanArch_UAA2.ApplicationCore.Services;
 using Starter_CleanArch_UAA2.Infrastructure.Database;
 using Starter_CleanArch_UAA2.Infrastructure.Database.Repositories;
-using IMailerService = Mailer.IMailerService;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
