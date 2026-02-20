@@ -21,8 +21,6 @@ builder.Services.AddSingleton<IMailerService, MailerService>(service =>
     );
 });
 
-
-
 // Add services to the container.
 builder.Services.AddSingleton<Random>();
 builder.Services.AddScoped<ISubscriptionService, SubscriptionService>();
