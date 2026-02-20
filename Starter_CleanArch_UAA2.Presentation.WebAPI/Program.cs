@@ -1,17 +1,32 @@
+using Mailer;
 using Microsoft.EntityFrameworkCore;
 using Starter_CleanArch_UAA2.ApplicationCore.Interfaces.Repositories;
 using Starter_CleanArch_UAA2.ApplicationCore.Interfaces.Services;
-using Starter_CleanArch_UAA2.ApplicationCore.Interfaces.Utils;
+
 using Starter_CleanArch_UAA2.ApplicationCore.Services;
 using Starter_CleanArch_UAA2.Infrastructure.Database;
 using Starter_CleanArch_UAA2.Infrastructure.Database.Repositories;
+using IMailerService = Mailer.IMailerService;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddSingleton<IMailerService, MailerService>(service =>
+{
+    return new MailerService(
+        builder.Configuration["Mailer:Host"]!,
+        builder.Configuration.GetValue<int>("Mailer:Port", 25),
+        builder.Configuration["Mailer:Username"]!,
+        builder.Configuration["Mailer:AppEmail"]!,
+        builder.Configuration["Mailer:AppName"]!
+    );
+});
+
+
 
 // Add services to the container.
 builder.Services.AddSingleton<Random>();
 builder.Services.AddScoped<ISubscriptionService, SubscriptionService>();
-builder.Services.AddScoped<IMailerService, Mailer.MailerService>();
+builder.Services.AddScoped<IMailerService,MailerService>();
 
 builder.Services.AddScoped<ISubscriberRepository, SubscriberRepository>();
 

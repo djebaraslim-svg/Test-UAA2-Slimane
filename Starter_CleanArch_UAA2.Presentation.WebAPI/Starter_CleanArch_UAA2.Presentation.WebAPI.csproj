@@ -16,6 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Mailer\Mailer.csproj" />
     <ProjectReference Include="..\Starter_CleanArch_UAA2.ApplicationCore\Starter_CleanArch_UAA2.ApplicationCore.csproj" />
     <ProjectReference Include="..\Starter_CleanArch_UAA2.Domain\Starter_CleanArch_UAA2.Domain.csproj" />
     <ProjectReference Include="..\Starter_CleanArch_UAA2.Infrastructure.Database\Starter_CleanArch_UAA2.Infrastructure.Database.csproj" />
