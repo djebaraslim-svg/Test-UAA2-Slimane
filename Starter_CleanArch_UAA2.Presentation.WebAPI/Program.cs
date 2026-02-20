@@ -11,7 +11,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddSingleton<Random>();
 builder.Services.AddScoped<ISubscriptionService, SubscriptionService>();
-builder.Services.AddScoped<IMailerService, MailerService>();
+builder.Services.AddScoped<IMailerService, Mailer.MailerService>();
 
 builder.Services.AddScoped<ISubscriberRepository, SubscriberRepository>();
 
