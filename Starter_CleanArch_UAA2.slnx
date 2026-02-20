@@ -1,0 +1,16 @@
+<Solution>
+  <Folder Name="/ApplicationCore/">
+    <Project Path="Starter_CleanArch_UAA2.ApplicationCore/Starter_CleanArch_UAA2.ApplicationCore.csproj" />
+  </Folder>
+  <Folder Name="/Domain/">
+    <Project Path="Starter_CleanArch_UAA2.Domain/Starter_CleanArch_UAA2.Domain.csproj" />
+  </Folder>
+  <Folder Name="/Infrastructure/">
+    <Project Path="Mailer/Mailer.csproj" Id="3516065b-895a-4936-890e-f0eb2dacc95e" />
+    <Project Path="Starter_CleanArch_UAA2.Infrastructure.Database/Starter_CleanArch_UAA2.Infrastructure.Database.csproj" />
+  </Folder>
+  <Folder Name="/Presentation/">
+    <File Path="ReasMe.md" />
+    <Project Path="Starter_CleanArch_UAA2.Presentation.WebAPI/Starter_CleanArch_UAA2.Presentation.WebAPI.csproj" />
+  </Folder>
+</Solution>
